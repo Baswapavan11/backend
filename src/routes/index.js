@@ -23,7 +23,7 @@ router.use("/superadmin", superAdminRoutes);
 router.use("/auth", authRoutes);
 // Admin - enrollments (CSV, access codes)
 router.use("/admin/enrollments", adminEnrollmentRoutes);
-
+router.use("/health", healthRoutes);
 // Educator
 router.use("/educator/availability", educatorAvailabilityRoutes);
 // Superadmin
@@ -52,5 +52,7 @@ router.use("/learner", learnerEnrollmentRoutes);
 
 router.use("/learner", learnerEnrollmentRoutes);
 router.use("/learner", learnerAttendanceRoutes);
+
+app.set("trust proxy", true);
 
 module.exports = router;
