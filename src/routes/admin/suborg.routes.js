@@ -5,7 +5,7 @@ const router = express.Router();
 const authMiddleware = require("../../middleware/auth.middleware");
 const tenantMiddleware = require("../../middleware/tenant.middleware");
 const roleMiddleware = require("../../middleware/role.middleware");
-const subOrgController = require("../../controllers/admin/subOrg.controller");
+const subOrgController = require("../../controllers/admin/suborg.controller");
 
 // Require admin or subOrgAdmin to access list/view
 router.use(authMiddleware);
