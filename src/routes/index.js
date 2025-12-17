@@ -16,6 +16,7 @@ const learnerAttendanceRoutes = require("./learner/attendance.routes");
 const superAdminRoutes = require("./superadmin/superadmin.routes");
 const educatorAvailabilityRoutes = require("./educator/availability.routes");
 const adminEnrollmentRoutes = require("./admin/enrollment.routes");
+const healthRoutes = require("./health.routes")
 
 router.use("/superadmin", superAdminRoutes);
 
@@ -53,6 +54,5 @@ router.use("/learner", learnerEnrollmentRoutes);
 router.use("/learner", learnerEnrollmentRoutes);
 router.use("/learner", learnerAttendanceRoutes);
 
-app.set("trust proxy", true);
 
 module.exports = router;
